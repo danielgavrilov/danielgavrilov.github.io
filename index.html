@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Daniel Gavrilov</title>
+
+        <meta name="description" content="Builds things, usually for the web.">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Roboto:700,900" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Daniel Gavrilov</h1>
+                <p>I build things, usually for the web.</p>
+             </header>
+ 
+            <section class="recent">
+                <h2><span>Recent things</span></h2>
+ 
+                <div class="thing">
+                    <h3><a href="http://alevels.herokuapp.com">A-level schools</a></h3>
+                    <p>Find and compare A-level schools.</p>
+                </div>
+
+                <div class="thing">
+                    <button id="try-wfp" class="button">Try it here</button>
+                    <h3><a href="http://github.com/danielgavrilov/WebFontPicker">WebFontPicker</a></h3>
+                    <p>Preview Google Fonts instantly.</p>
+                </div>
+            </section>
+ 
+            <section class="past">
+                <h2><span>Things from the past</span></h2>
+ 
+                <div class="thing">
+                    <time>Feb 2013</time>
+                    <a href="http://dl.dropboxusercontent.com/u/5720002/robomac/index.html" class="content">
+                        <h3>Robomac 2013</h3>
+                        <p>Designed and coded a student competition website.</p>
+                    </a>
+                </div>
+ 
+                <div class="thing">
+                    <time>Jun 2012</time>
+                    <a href="http://eestec-sk.org.mk/gonewild" class="content">
+                        <h3>EESTECers Gone Wild</h3>
+                        <p>Built a small website to promote a student holiday.</p>
+                    </a>
+                </div>
+ 
+                <div class="thing">
+                    <time>Jul 2011</time>
+                    <a href="http://ultim8.info" class="content">
+                        <h3>ultim8</h3>
+                        <p>A one-page website for the team.</p>
+                    </a>
+                </div>
+ 
+                <div class="thing">
+                    <time>Mar 2010</time>
+                    <a href="http://0.mk" class="content">
+                        <h3>0.mk</h3>
+                        <p>Designed a macedonian URL shortener.</p>
+                    </a>
+                </div>
+            </section>
+ 
+            <footer>
+                <hr>
+                <a href="mailto:daniel@gavrilov.co.uk" class="email">daniel<span>@</span>gavrilov.co.uk</a>
+                <div class="social">
+                    <a href="http://twitter.com/danielgavrilov">Twitter</a>
+                    &bull;
+                    <a href="http://github.com/danielgavrilov">Github</a>
+                </div>
+            </footer>
+        </div>
+
+        <script type="text/javascript">
+
+            var tryButton = document.getElementById('try-wfp');
+
+            tryButton.addEventListener('click', function(event) {
+
+                // Bookmarklet from https://github.com/danielgavrilov/WebFontPicker/blob/master/bookmarklet.js
+
+                (function() {
+                    var WFP = window.WFP = window.WFP || {};
+                    WFP.bookmarklet = 1;
+                    WFP.Picker && WFP.Picker.show();
+                    if (WFP.attached || WFP.Picker) return;
+                    function loadStylesheet(url) {
+                        var link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.type = 'text/css';
+                        link.href = url;
+                        document.head.appendChild(link);
+                    }
+                    function loadScript(url) {
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = url;
+                        document.head.appendChild(script);
+                    }
+                    loadStylesheet('http://gavrilov.co.uk/wfp/WFP.css');
+                    loadScript('http://gavrilov.co.uk/wfp/WFP.full.min.js');
+                    WFP.attached = true;
+                })();
+
+                event.preventDefault();
+
+            }, false);
+
+        </script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-39384989-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
