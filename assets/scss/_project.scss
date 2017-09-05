@@ -1,0 +1,233 @@
+/* =============================================================================
+ * Project page
+ */
+
+$primary: #f3f3f3;
+$secondary: #eee;
+$text: #333;
+
+.project {
+
+  .site-header, .masthead {
+    background-color: $primary;
+    color: $text;
+  }
+
+  .masthead {
+    padding-top: 2em;
+    padding-bottom: 5em;
+    text-align: center;
+    background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
+    margin-bottom: 4em;
+
+    h1 {
+      font-size: 5em;
+      margin: 0 0 .5em;
+    }
+
+    p {
+      font-size: 2em;
+      margin: 0;
+      opacity: .7;
+    }
+
+    p a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 2px solid rgba(0,0,0,.2);
+      transition: border-color 200ms ease;
+
+      &:hover {
+        border-color: inherit;
+      }
+    }
+
+    p abbr {
+      text-decoration: none;
+      border-bottom: 2px dotted rgba(0,0,0,.2);
+      cursor: help;
+    }
+
+    .buttons {
+      margin: 3.75em 0 -8em;
+    }
+
+    .button {
+      font-size: 1.7em;
+      font-weight: 500;
+      color: $text;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: white;
+      box-shadow: 0 2px 3px rgba(0,0,0,.2);
+      border-radius: .25em;
+      padding: .55em 1.0em .45em;
+      margin: 0 1em .75em 0;
+      position: relative;
+      display: inline-block;
+      transition: color 250ms ease,
+                  transform 250ms ease,
+                  box-shadow 250ms ease;
+
+      &:hover {
+        color: darken($text, 10);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 11px rgba(0,0,0,.12);
+      }
+
+      &.primary {
+        font-weight: 700;
+      }
+
+      &.icon {
+        padding-left: 2em;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 0.5em;
+          line-height: 1em;
+          margin-top: -0.5em;
+          font-size: 1.1em;
+        }
+      }
+
+      &.icon-github {
+        padding-left: 2.25em;
+
+        &:before {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-bottom: 4em;
+
+    h2 {
+      font-size: 3em;
+      font-weight: 700;
+      color: $text;
+      margin: 2em 0 .75em;
+    }
+
+    p {
+      font-size: 1.8em;
+      line-height: 1.5;
+    }
+
+    .images {
+      margin: 3em 0;
+      text-align: center;
+    }
+
+    .intro {
+      font-size: 2.2em;
+      font-weight: 400;
+      opacity: .6;
+      margin-bottom: 2em;
+    }
+
+    p a, ul li a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0,0,0,.2);
+      transition: border-color 200ms ease,
+                  color 200ms ease;
+
+      &:hover {
+        border-color: inherit;
+      }
+    }
+
+    ul {
+      font-size: 1.8em;
+    }
+
+    img {
+      width: 100%;
+      border-radius: .25em;
+    }
+
+    figcaption {
+      font-size: 1.5em;
+      line-height: 1.4;
+      opacity: .7;
+      margin: .5em 0;
+      text-align: center;
+    }
+
+    hr {
+      width: 20em;
+      margin: 5em auto;
+      border: none;
+      border-top: 1px solid rgba(0,0,0,.1);
+    }
+  }
+
+}
+
+
+/* =============================================================================
+ * Project overview
+ */
+
+.project-overview {
+  background-color: white;
+  text-align: center;
+  border-radius: .5em;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  transition: transform 250ms ease,
+              box-shadow 250ms ease;
+
+  &:hover,
+  &:active {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 13px rgba(0,0,0,.12);
+  }
+
+  .image {
+
+    .image-border {
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      image-rendering: auto;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+
+  .information {
+    padding: 1.5em 2em 2em;
+
+    .title {
+      font-size: 2.2em;
+      margin: 0 0 .3em;
+    }
+
+    .description {
+      font-size: 1.6em;
+      margin: 0;
+      opacity: .75;
+    }
+
+    .date {
+      font-size: 1.6em;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      opacity: .4;
+      margin: .6em 0 0;
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+<header class="site-header">
+  <div class="wrapper clearfix">
+
+    <div class="site-title">
+      <h1>
+        <a href="{{ site.baseurl }}/">Daniel Gavrilov</a>
+      </h1>
+    </div>
+
+    {% comment %}
+
+    <nav class="site-nav" role="navigation">
+
+      <ul class="site-nav-links">
+
+        {% assign pages = site.pages %}
+
+        {% assign sorted_pages = pages | where: "navigation",true | sort: "order" %}
+        {% for node in sorted_pages %}
+          {% if node.title %}
+            <li>
+              <a href="{% unless node.draft %}{{ node.url | replace:'index.html','' | prepend: site.baseurl }}{% else %}#{% endunless %}"
+                 class="{% if node.url == page.url %}current {% endif %}{% if node.draft %}draft {% endif %}"
+                {% if node.url == page.url %}
+                  aria-selected="true"
+                {% else %}
+                  aria-selected="false"
+                {% endif %}>
+                <span>{{ node.title }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% endcomment %}
+
+    {% if page.project %}
+      <div class="back-to-projects">
+        <a href="{{ site.baseurl }}/">&larr; Back to Projects</a>
+      </div>
+    {% endif %}
+
+  </div>
+</header>

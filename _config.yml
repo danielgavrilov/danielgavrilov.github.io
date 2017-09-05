@@ -1,0 +1,63 @@
+# Site settings
+
+title: Daniel Gavrilov
+email: daniel@gavrilov.co.uk
+description: Personal website
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://gavrilov.co.uk" # the base hostname & protocol for your site
+timezone: "Europe/London"
+
+# Social media
+
+twitter_username: danielgavrilov
+github_username: danielgavrilov
+
+# Build settings
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
+  - Gemfile*
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - bower.json
+  - bower_components
+
+# Collections
+
+collections:
+  projects:
+    output: true
+    permalink: /:path/
+  redirects:
+    output: true
+    permalink: /:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      navigation: false
+      project: false
+  -
+    scope:
+      path: "projects"
+      type: pages
+    values:
+      layout: project
+      project: true
+      theme: project
+
+sass:
+  sass_dir: assets/scss
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap

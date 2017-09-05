@@ -1,0 +1,18 @@
+<div class="box">
+  <a href="{{ project.url | relative_url }}" class="project-overview {{ project.id }}-overview">
+    <div class="image">
+      <div class="image-border">
+        <img src="{{ project.url | relative_url }}{{ project.thumbnail }}" alt="{{ project.title }} thumbnail">
+      </div>
+    </div>
+    <div class="information">
+      <h2 class="title">{{ project.title }}</h2>
+      <p class="description">{{ project.description }}</p>
+      {% if project.in_progress %}
+        <p class="date in-progress">In progress</p>
+      {% else %}
+        <p class="date">{{ project.date | date: "%B %Y" }}</p>
+      {% endif %}
+    </div>
+  </a>
+</div>

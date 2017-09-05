@@ -1,0 +1,76 @@
+---
+id: alevel-schools
+theme: alevel-schools
+title: A-level schools
+description: A-level schools comparison.
+thumbnail: "thumbnail.png"
+date: "2014-04-26"
+---
+
+<div class="masthead">
+  <div class="wrapper">
+    <h1>{{ page.title }}</h1>
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+        <p>
+          A website for comparing A-level schools by subject performance.
+        </p>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="https://github.com/danielgavrilov/schools" class="button icon icon-github">Source code</a>
+      <a href="https://alevels.herokuapp.com" class="button primary">Website</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="wrapper">
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+        <p>
+          The Department for Education publishes yearly <a href="https://www.compare-school-performance.service.gov.uk/download-data">school performance data</a>, which apart from overall performance also includes <strong>subject-specific</strong> performance for A-levels. This website tries to expose and allow comparison by this data, which wasn't shown by most of the school comparison websites at the time.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+  var tryButton = document.getElementById('try-wfp');
+
+  tryButton.addEventListener('click', function(event) {
+
+    // Bookmarklet from https://github.com/danielgavrilov/WebFontPicker/blob/master/bookmarklet.js
+
+    (function() {
+      var WFP = window.WFP = window.WFP || {};
+      WFP.bookmarklet = 2;
+      WFP.Picker && WFP.Picker.show();
+      if (WFP.attached || WFP.Picker) return;
+      function loadStylesheet(url) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = url;
+        document.head.appendChild(link);
+      }
+      function loadScript(url) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        document.head.appendChild(script);
+      }
+      loadStylesheet('//gavrilov.co.uk/wfp/WFP.css');
+      loadScript('//gavrilov.co.uk/wfp/WFP.full.min.js');
+      WFP.attached = true;
+    })();
+
+    event.preventDefault();
+
+  }, false);
+
+</script>

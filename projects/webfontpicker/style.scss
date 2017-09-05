@@ -1,0 +1,119 @@
+$primary: #418aff;
+$primary-darker: #307af2;
+
+.webfontpicker {
+
+  .site-header, .masthead {
+    background-color: $primary;
+    color: white;
+  }
+
+  .masthead {
+    background: linear-gradient(to bottom, $primary 0%, $primary-darker 100%);
+    margin-bottom: 7em;
+
+    p {
+      opacity: 1;
+    }
+
+    p a {
+      color: inherit;
+      border-bottom: 2px solid rgba(white,.2);
+
+      &:hover {
+        border-color: white;
+      }
+    }
+
+    p abbr {
+      border-bottom: 2px dotted rgba(white,.2);
+    }
+
+    .button {
+      color: $primary;
+
+      &:hover {
+        color: darken($primary, 10);
+      }
+    }
+  }
+
+  .content {
+    background-color: white;
+    color: black;
+
+    h2 {
+      font-size: 2.2em;
+      font-weight: 700;
+      color: $primary;
+      text-transform: uppercase;
+      margin: .75em 0;
+    }
+  }
+
+  .properties {
+    display: flex;
+    align-items: stretch;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 4em;
+    line-height: 1.1;
+
+    .property {
+      flex: 1;
+      padding: 1.2em 1.3em .8em;
+      border-right: 2px solid #eee;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: .03em;
+        color: #bbb;
+        text-transform: uppercase;
+        margin: 0 0 .3em;
+      }
+
+      p {
+        font-size: 1.7em;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+  }
+
+  .install {
+    text-align: center;
+    padding: 1.5em;
+    border-top: 4px solid #eee;
+
+    .bookmarklet {
+      font-size: 2em;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      padding: .5em 1em;
+      display: inline-block;
+      background-color: $primary;
+      border-radius: .25em;
+      box-shadow: 0 3px 6px rgba(0,0,0, 0.20);
+      transition: transform 250ms ease, box-shadow 250ms ease;
+      margin: .25em 0 1.1em;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 13px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+}
+
+.webfontpicker-overview {
+  background: linear-gradient(135deg, $primary 0%, $primary-darker 100%);
+  color: white;
+}

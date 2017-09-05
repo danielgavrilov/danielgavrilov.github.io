@@ -1,0 +1,95 @@
+---
+id: robovis
+theme: robovis
+title: RoboVis
+description: Sensor data visualisation.
+thumbnail: "thumbnail.png"
+date: "2015-06-14"
+---
+
+<div class="masthead">
+  <div class="wrapper">
+    <h1>{{ page.title }}</h1>
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+        <p>
+          Live sensor data visualisation for two-wheeled robots.
+        </p>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="https://github.com/danielgavrilov/robovis" class="button icon icon-github">Source code</a>
+      <a href="//gavrilov.co.uk/robovis" class="button primary">Demo</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="wrapper">
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+
+        <p class="intro">
+          A debugging tool I built and used for the two-wheeled robots in the <a href="http://www.cs.ucl.ac.uk/current_students/syllabus_index_2016_2017/undergrad/105p_robotics_programming/">Robotics Programming</a> module at UCL. The tool visualises sensor readings, as well as the position and orientation of the robot (estimated by the program running on the robot).
+        </p>
+
+        <h2>Context</h2>
+
+        <p>
+          For the module, we had to program the two-wheeled robots to solve a fixed-size maze. The final task was to write a program that traverses the maze and then goes from start to finish in the quickest time.
+        </p>
+
+        <div class="images">
+          <div class="row">
+            <div class="col s6">
+              <img src="robot.jpg" alt="">
+              <figcaption>Front view of robot; rotating infrared sensors visible in the corners</figcaption>
+            </div>
+            <div class="col s6">
+              <img src="robot-top.jpg" alt="">
+              <figcaption>Top view of robot</figcaption>
+            </div>
+          </div>
+        </div>
+
+        <div class="images">
+          <div class="row">
+            <div class="col s8 push-s2">
+              <img src="robot-sim.png" alt="">
+              <figcaption>The robot representation in the visualisation; sensor ranges are shown in gray</figcaption>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          There were 9 sensors on the robot: 4 <strong>infrared</strong> distance sensors (2 on front and 2 on side), 1 <strong>ultrasound</strong> distance sensor (in the front middle), 2 bumper <strong>switches</strong> to detect when the robot hits something and 2 <strong>wheel encoders</strong> measuring the distance travelled by each wheel.
+        </p>
+
+        <p>
+          Each type of sensor had its own characteristics and errors. To create a robust program, we needed to <strong>understand these errors</strong> to some degree and know the limitations of the sensors. This is one of the problems this tool tried to solve; the other was to allow rewinding and playback to <strong>understand the behaviour</strong> of the program by seeing its inputs (sensor values) and outputs (wheel voltages).
+        </p>
+
+        <h2>What the tool does</h2>
+
+        <p>
+          The tool connects to a robot through WiFi and listens for events. The program on the robot sends regular updates of its state and sensor readings. These are shown live on the visualisation and stored in a database file, so that they can be inspected even after the robot disconnects.
+        </p>
+
+        <h2>Credits</h2>
+
+        <p>
+          This project was inspired by Bret Victor's <a href="https://vimeo.com/97903574"><strong>Seeing Spaces</strong></a> talk. Bret mentions that in order to understand the behaviour of a robot, we need to "get inside the robot's head and see what it's <strong>seeing</strong>, and see what it's <strong>thinking</strong>". This tool only focuses on "what the robot sees" part, but arguably the other is more exciting&mdash;how could we represent a program's behaviour?
+        </p>
+
+        <hr>
+
+        <p>
+          Also see my <a href="https://github.com/danielgavrilov/ucl-robotics">maze solving program</a> which won 1st place in the final competition.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+</div>

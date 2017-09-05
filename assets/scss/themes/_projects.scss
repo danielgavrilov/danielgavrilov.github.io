@@ -1,0 +1,34 @@
+.projects {
+  background-color: #eee;
+  color: black;
+
+  .content {
+    margin-bottom: 4em;
+
+    h2 {
+      font-size: 3em;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.8em;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0,0,0,.2);
+      transition: border-color 200ms ease;
+
+      &:hover {
+        border-color: inherit;
+      }
+    }
+
+  }
+}

@@ -1,86 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
+---
+layout: page
+title: Projects
+navigation: true
+order: 1
+theme: projects
+redirect_from: /projects/
+---
 
-        <title>Daniel Gavrilov</title>
+<div class="wrapper">
 
-        <meta name="description" content="Builds things, usually for the web.">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+  <div class="row">
+    <div class="col s12 l8">
+      <div class="content">
+        <p>
+          Hello! I'm a recent Computer Science graduate from University College London, currently <strong>looking&nbsp;for&nbsp;work</strong>. Below are some of my projects, most of them related to data visualisation.
+        </p>
+        <p>
+          Feel free to <a href="mailto:daniel@gavrilov.co.uk">get in touch</a>.
+        </p>
+      </div>
+    </div>
+  </div>
 
-        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Roboto:700,900" rel="stylesheet">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-    </head>
+</div>
 
-    <body>
-        <div class="container">
-            <header>
-                <h1>Daniel Gavrilov</h1>
-                <p>I build things, usually for the web.</p>
-             </header>
+{% assign projects = site.pages | where: "project", true | sort: "date" | reverse %}
 
-            <section class="recent">
-                <h2><span>Some things I've made</span></h2>
-
-                <div class="thing">
-                    <h3><a href="http://alevels.herokuapp.com">A-level schools</a></h3>
-                    <p>Find and compare A-level schools.</p>
-                </div>
-
-                <div class="thing">
-                    <button id="try-wfp" class="button">Try it here</button>
-                    <h3><a href="http://github.com/danielgavrilov/WebFontPicker">WebFontPicker</a></h3>
-                    <p>Preview Google Fonts instantly.</p>
-                </div>
-            </section>
-
-            <footer>
-                <hr>
-                <a href="mailto:daniel@gavrilov.co.uk" class="email">daniel<span>@</span>gavrilov.co.uk</a>
-                <div class="social">
-                    <a href="http://twitter.com/danielgavrilov">Twitter</a>
-                    &bull;
-                    <a href="http://github.com/danielgavrilov">Github</a>
-                </div>
-            </footer>
-        </div>
-
-        <script type="text/javascript">
-
-            var tryButton = document.getElementById('try-wfp');
-
-            tryButton.addEventListener('click', function(event) {
-
-                // Bookmarklet from https://github.com/danielgavrilov/WebFontPicker/blob/master/bookmarklet.js
-
-                (function() {
-                    var WFP = window.WFP = window.WFP || {};
-                    WFP.bookmarklet = 2;
-                    WFP.Picker && WFP.Picker.show();
-                    if (WFP.attached || WFP.Picker) return;
-                    function loadStylesheet(url) {
-                        var link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.type = 'text/css';
-                        link.href = url;
-                        document.head.appendChild(link);
-                    }
-                    function loadScript(url) {
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = url;
-                        document.head.appendChild(script);
-                    }
-                    loadStylesheet('//gavrilov.co.uk/wfp/WFP.css');
-                    loadScript('//gavrilov.co.uk/wfp/WFP.full.min.js');
-                    WFP.attached = true;
-                })();
-
-                event.preventDefault();
-
-            }, false);
-
-        </script>
-    </body>
-</html>
+<div class="wrapper">
+  <div class="responsive-boxes">
+    {% for project in projects %}
+      {% include project-overview.html project=project %}
+    {% endfor %}
+    <!-- flexbox alignment fixes -->
+    {% for i in (0..2) %}
+      <div class="box-empty"></div>
+    {% endfor %}
+  </div>
+</div>

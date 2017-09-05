@@ -1,0 +1,71 @@
+---
+id: webfontpicker
+theme: webfontpicker
+title: WebFontPicker
+description: A bookmarklet for previewing Google Fonts.
+thumbnail: "thumbnail.png"
+date: "2013-12-11"
+---
+
+{% capture bookmarklet %}javascript:(function(){var%20t=window.WFP=window.WFP||{},e=%22https:%22===window.location.protocol%3F%22https:%22:%22http:%22;t.bookmarklet=3,t.Picker%26%26t.Picker.show(),t.attached||t.Picker||(function(t){var%20e=document.createElement(%22link%22);e.rel=%22stylesheet%22,e.type=%22text/css%22,e.href=t,document.head.appendChild(e)}(e+%22//gavrilov.co.uk/wfp/WFP.css%22),function(t){var%20e=document.createElement(%22script%22);e.type=%22text/javascript%22,e.src=t,document.head.appendChild(e)}(e+%22//gavrilov.co.uk/wfp/WFP.full.min.js%22),t.attached=!0)})();{% endcapture %}
+
+<div class="masthead">
+  <div class="wrapper">
+    <h1>{{ page.title }}</h1>
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+        <p>
+          A <abbr title="A bookmarklet is a bookmark that runs some JavaScript code on the current page.">bookmarklet</abbr> for previewing <a href="https://fonts.google.com">Google Fonts</a> on any live site, speeding up the process of choosing a font by seeing it in context with the design of the website.
+        </p>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="https://github.com/danielgavrilov/WebFontPicker" class="button icon icon-github">Source code</a>
+      <a href="{{ bookmarklet }}" class="button primary" id="try-wfp">Launch it here</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="wrapper">
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+
+        <div class="install">
+          <h2>Installation instructions</h2>
+          <p>
+            Save the following link in your browser bookmarks:
+          </p>
+          <a href="{{ bookmarklet }}" class="bookmarklet">WebFontPicker</a>
+        </div>
+
+        <div class="properties">
+          <div class="property">
+            <h3>Latest version</h3>
+            <p>0.2.0</p>
+          </div>
+          <div class="property">
+            <h3>Released on</h3>
+            <p>11 Dec 2013</p>
+          </div>
+          <div class="property">
+            <h3>Current status</h3>
+            <p>Neglected</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="row">
+      <div class="col s12 push-m1 m10 push-l2 l8">
+        <p>
+          WebFontPicker allows you to change the font of specific HTML elements by using CSS selectors. It contains all fonts available on Google Fonts and automatically loads webfonts when they are selected.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+$primary: #f3f3f3;
+$secondary: #eee;
+$text: #333;
+
+.room-bookings {
+
+  .site-header, .masthead {
+    background-color: $primary;
+    color: $text;
+  }
+
+  .masthead {
+    background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
+
+    .button {
+      color: $text;
+
+      &:hover {
+        color: darken($text, 10);
+      }
+    }
+  }
+
+  .content {
+    background-color: white;
+    color: black;
+  }
+
+}
+
+.room-bookings-overview {
+  background-color: white;
+}
