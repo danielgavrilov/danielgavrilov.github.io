@@ -12,10 +12,14 @@ redirect_from: /projects/
   <div class="row">
     <div class="col s12 l8">
       <div class="content">
+        <p>Hello! I'm currently taking a break from employment to work on personal projects.</p>
         <p>
-          Hello! I'm a recent Computer Science graduate, currently working at <a href="https://ourworldindata.org"><strong>Our World in Data</strong></a>. Below are some of my projects, most of them related to data visualisation.
+          In the past, I worked on data visualisation tools at <a href="https://ourworldindata.org"><strong>Our World in
+              Data</strong></a>
+          and <a href="https://flourish.studio"><strong>Flourish</strong></a>.
         </p>
         <p>
+          Below are some of my older personal projects, most of them related to data visualisation.
           Feel free to <a href="mailto:daniel@gavrilov.co.uk">get in touch</a>.
         </p>
       </div>
@@ -29,11 +33,11 @@ redirect_from: /projects/
 <div class="wrapper">
   <div class="responsive-boxes">
     {% for project in projects %}
-      {% include project-overview.html project=project %}
+    {% include project-overview.html project=project %}
     {% endfor %}
     <!-- flexbox alignment fixes -->
     {% for i in (0..2) %}
-      <div class="box-empty"></div>
+    <div class="box-empty"></div>
     {% endfor %}
   </div>
 </div>
