@@ -4,7 +4,7 @@ title: Daniel Gavrilov
 email: daniel@gavrilov.co.uk
 description: Personal website
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://gavrilov.co.uk" # the base hostname & protocol for your site
+url: "http://github.danielgavrilov.com" # the base hostname & protocol for your site
 timezone: "Europe/London"
 
 # Social media
@@ -38,15 +38,13 @@ collections:
     permalink: /:path/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: pages
     values:
       navigation: false
       project: false
-  -
-    scope:
+  - scope:
       path: "projects"
       type: pages
     values:
